@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{0CB45227-1CF8-4A8A-8975-938CF9D028AD}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/UsuarioController.cs">
+    <Files>
+      <File FileName="Controllers/PessoaController.cs" Line="40" Column="14" />
+      <File FileName="Controllers/UsuarioController.cs" Line="10" Column="5" />
+      <File FileName="Models/Pessoa.cs" />
+      <File FileName="Models/Usuario.cs" />
+      <File FileName="Repositories/UsuarioRepository.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SolucionarApi" expanded="True">
+            <Node name="SolucionarApi" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="UsuarioController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SolucionarApi PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,11 +1,10 @@
-using System;
-namespace SolucionarApi.Models
+﻿namespace VideoAPI.Models
 {
     public class Video
     {
-        public int Id { get; set; }
-        public string Link { get; set; }
+        public long Id { get; set; }
+        public string Title { get; set; }
         public double Duration { get; set; }
-
+        public long Timestamp { get; set; }
     }
 }

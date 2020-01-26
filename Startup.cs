@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using SolucionarApi.Repositories;
-using SolucionarApi.Repositories.Interfaces;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
+using VideoAPI.Repositories;
 
-namespace SolucionarApi
+namespace VideoAPI
 {
     public class Startup
     {
@@ -25,19 +18,22 @@ namespace SolucionarApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //Injeções de Contexts
+            services.AddDbContext<VideoRepository>(opt => opt.UseInMemoryDatabase("VideoList"));
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Video Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {
+                    Title = "VideoAPI",
+                    Version = "v1",
+                    Description = "API restful para gerar estatísticas da duração de vídeos.",
+                });
             });
-            services.AddScoped<IVideoRepository, VideoRepository>();
-            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("Video")); 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -48,10 +44,16 @@ namespace SolucionarApi
             {
                 app.UseHsts();
             }
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "VideoAPI v1");
+                c.RoutePrefix = "api";
+            });
+
             app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api de teste"); });
         }
     }
 }

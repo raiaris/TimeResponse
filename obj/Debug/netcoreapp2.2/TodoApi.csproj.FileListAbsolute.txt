@@ -1,0 +1,16 @@
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/appsettings.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.deps.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.runtimeconfig.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.runtimeconfig.dev.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.dll
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/TodoApi.pdb
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.csprojAssemblyReference.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorAssemblyInfo.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorAssemblyInfo.cs
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.AssemblyInfoInputs.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.AssemblyInfo.cs
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.RazorTargetAssemblyInfo.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.dll
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/TodoApi.pdb

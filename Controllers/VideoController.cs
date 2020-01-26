@@ -1,112 +1,158 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SolucionarApi.Models;
-using SolucionarApi.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using VideoAPI.Models;
+using VideoAPI.Repositories;
+using VideoAPI.Requests;
 
-
-namespace SolucionarApi.Controllers
+namespace VideoAPI.Controllers
 {
-
-
-
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("/api/[controller]")]
-    public class VideoController : Controller
+    public class VideoController : ControllerBase
     {
-    
-        private readonly IVideoRepository _videoRepository;
+        private readonly VideoRepository _repository;
 
-        public VideoController(IVideoRepository videoRepository)
+        public VideoController(VideoRepository repository)
         {
-            _videoRepository = videoRepository;
+            _repository = repository;
         }
 
         [HttpGet]
-        [Produces(typeof(Video))]
-        public IActionResult GetAllVideos()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<Video>>> GetAll()
         {
-            var videos = _videoRepository.GetAll();
-
-            if (videos == null)
+            try
             {
-                return NoContent();
-            }
-            else
+                return await _repository.Videos.ToListAsync();
+            } catch(NullReferenceException ex)
             {
-                return Ok(videos);
+                throw ex;
             }
         }
 
-        [HttpGet("Video/{id}")]
-        public IActionResult GetVideoById(int id)
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<Video>> GetById(long id)
         {
-            var video = _videoRepository;
+            try
+            {
+                var video = await _repository.Videos.FindAsync(id);
 
-            if (video == null)
+                if (video == null)
+                {
+                    return NotFound();
+                }
+
+                return video;
+            } catch(KeyNotFoundException ex)
             {
-                return NoContent();
-            }
-            else
-            {
-                return Ok(video);
+                throw ex;
             }
         }
 
         [HttpPost]
-        public IActionResult Post(Video video)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<Video>> Add(VideoRequest request)
         {
-            if (video == null)
+            try
             {
+                var date = this.TimestampToDate(request.Timestamp);
+
+                //Transforma o timestamp em DateTime e verifica se é valido
+                if(date != null)
+                {
+                    //Verifica se a diferença do timestamp de postagem do video é menor que 60 segundos
+                    var difference = (DateTime.Now - date).TotalSeconds;
+                    if(difference <= 60)
+                    {
+                        var video = new Video()
+                        {
+                            Title = request.Title,
+                            Duration = request.Duration,
+                            Timestamp = request.Timestamp
+                        };
+
+                        _repository.Videos.Add(video);
+                        await _repository.SaveChangesAsync();
+
+                        return CreatedAtAction(nameof(GetById), new { id = video.Id }, video);
+                    }
+                    return NoContent();
+                }
                 return NoContent();
-            }
-            else
+
+            } catch(MissingFieldException ex)
             {
-                try
-                {
-                   _context.Video.Add(Video);
-                     await _context.SaveChangesAsync();
-                }
-                catch
-                {
-                    throw new NotImplementedException();
-                }
+                throw ex;
             }
         }
 
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Edit(long id, Video video)
+        {
+            try
+            {
+                _repository.Entry(video).State = EntityState.Modified;
+                await _repository.SaveChangesAsync();
 
-        //  [HttpPost]
-        // public async Task<ActionResult<Video>> Post(Video video)
-        // {
-           
-        //    try
-        //         {
-        //              _context.Video.Add(Video);
-        //              await _context.SaveChangesAsync();
-        //         }
-        //         catch
-        //         {
-        //             throw new NotImplementedException();
-        //         }
-        // }
+                return CreatedAtAction(nameof(GetById), new { id = video.Id }, video);
 
+            } catch(MissingFieldException ex)
+            {
+                throw ex;
+            }
+        }
 
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteAll(long id)
+        {
+           try
+            {
+                _repository.Videos.RemoveRange(_repository.Videos);
+                await _repository.SaveChangesAsync();
 
+                return NoContent();
+            } catch(NullReferenceException ex)
+            {
+                throw ex;
+            }
+        }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Delete(long id)
         {
-            var video = _videoRepository;
+            try
+            {
+                var video = await _repository.Videos.FindAsync(id);
 
-            if (video == null)
-            {
+                _repository.Videos.Remove(video);
+                await _repository.SaveChangesAsync();
+
                 return NoContent();
-            }
-            else
+            } catch (KeyNotFoundException ex)
             {
-                return Ok(video);
+                throw ex;
             }
+        }
+
+        private DateTime TimestampToDate(long timestamp)
+        {
+            DateTime dtDateTime = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(timestamp).ToLocalTime();
+            return dtDateTime;
         }
     }
 }

@@ -1,0 +1,48 @@
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/appsettings.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/VideoAPI.deps.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/VideoAPI.runtimeconfig.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/VideoAPI.runtimeconfig.dev.json
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/VideoAPI.dll
+/Users/larissa/Desktop/TodoApi/TodoApi/bin/Debug/netcoreapp2.2/VideoAPI.pdb
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.csprojAssemblyReference.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.RazorAssemblyInfo.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.RazorAssemblyInfo.cs
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.AssemblyInfoInputs.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.AssemblyInfo.cs
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.RazorTargetAssemblyInfo.cache
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.dll
+/Users/larissa/Desktop/TodoApi/TodoApi/obj/Debug/netcoreapp2.2/VideoAPI.pdb
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/appsettings.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/VideoAPI.deps.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/VideoAPI.runtimeconfig.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/VideoAPI.runtimeconfig.dev.json
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/VideoAPI.dll
+/Users/larissa/Desktop/VideoAPI/VideoAPI/bin/Debug/netcoreapp2.2/VideoAPI.pdb
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.csprojAssemblyReference.cache
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.RazorAssemblyInfo.cache
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.RazorAssemblyInfo.cs
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.AssemblyInfoInputs.cache
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.AssemblyInfo.cs
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.RazorTargetAssemblyInfo.cache
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.dll
+/Users/larissa/Desktop/VideoAPI/VideoAPI/obj/Debug/netcoreapp2.2/VideoAPI.pdb
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\VideoAPI.deps.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\VideoAPI.runtimeconfig.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\VideoAPI.runtimeconfig.dev.json
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\VideoAPI.dll
+C:\Users\rai rais\Desktop\TimeResponse\bin\Debug\netcoreapp2.2\VideoAPI.pdb
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.csprojAssemblyReference.cache
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.RazorAssemblyInfo.cache
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.RazorAssemblyInfo.cs
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.AssemblyInfoInputs.cache
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.AssemblyInfo.cs
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.RazorTargetAssemblyInfo.cache
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.dll
+C:\Users\rai rais\Desktop\TimeResponse\obj\Debug\netcoreapp2.2\VideoAPI.pdb

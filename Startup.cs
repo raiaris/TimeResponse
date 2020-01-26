@@ -33,6 +33,8 @@ namespace SolucionarApi
             {
                 c.SwaggerDoc("v1", new Info { Title = "Video Api", Version = "v1" });
             });
+            services.AddScoped<IVideoRepository, VideoRepository>();
+            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("Video")); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +48,6 @@ namespace SolucionarApi
             {
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseSwagger();

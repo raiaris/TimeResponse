@@ -1,25 +1,24 @@
 ﻿<Properties StartupConfiguration="{0CB45227-1CF8-4A8A-8975-938CF9D028AD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/UsuarioController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
-      <File FileName="Controllers/PessoaController.cs" Line="40" Column="14" />
-      <File FileName="Controllers/UsuarioController.cs" Line="10" Column="5" />
-      <File FileName="Models/Pessoa.cs" />
-      <File FileName="Models/Usuario.cs" />
-      <File FileName="Repositories/UsuarioRepository.cs" />
+      <File FileName="Controllers/VideoController.cs" Line="38" Column="10" />
+      <File FileName="Repositories/Interfaces/IVideoRepository.cs" />
+      <File FileName="Repositories/VideoRepository.cs" />
+      <File FileName="Models/Video.cs" />
+      <File FileName="Startup.cs" Line="32" Column="69" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SolucionarApi" expanded="True">
             <Node name="SolucionarApi" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="UsuarioController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Repositories" expanded="True">
                 <Node name="Interfaces" expanded="True" />
               </Node>
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -29,8 +28,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/larissa/Desktop/TimeResponse/Repositories/VideoRepository.cs" relfile="Repositories/VideoRepository.cs" line="18" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SolucionarApi PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.SolucionarApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

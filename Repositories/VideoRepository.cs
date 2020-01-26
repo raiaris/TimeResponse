@@ -7,23 +7,34 @@ using SolucionarApi.Repositories.Interfaces;
 
 namespace SolucionarApi.Repositories
 {
+
     public class VideoRepository : IVideoRepository
     {
-        private readonly string _connectionString;
-        private readonly List<Video> videos = new List<Video>();
-        public VideoRepository(string conectionString)
+
+        public VideoRepository()
         {
-            _connectionString = conectionString;
         }
 
-        public IEnumerable<Video> GetAll()
+        public Resposta GetAll()
         {
             try
             {
-                let total = videos.reduce((total, videos) => total + videos.Duration, 0);
+                Resposta resposta = new Resposta(0, 0, 0, 0, 0);
 
-                Resposta resposta = new Resposta();
+                foreach (var video in videos)
+                {
+                    resposta.Sum += video.Duration;
+                    resposta.Count++;
+                    if (video.Duration > resposta.Max)
+                    {
+                        resposta.Max = video.Duration;
+                    }
+                    resposta.Avg = resposta.Sum / videos.Count;
+                    resposta.Min = 0;
 
+                }
+
+                return resposta;
 
             }
             catch
@@ -32,20 +43,15 @@ namespace SolucionarApi.Repositories
             }
         }
 
-
-
-        public void RemovePessoa(bool deletar)
+        public void RemoveVideo(int id)
         {
             try
             {
-                if (deletar == true)
-                {
-                    videos.RemoveAll;
-                }
+                // videos.RemoveAt(id);
             }
             catch
             {
-
+                throw new NotImplementedException();
             }
         }
 
@@ -54,8 +60,7 @@ namespace SolucionarApi.Repositories
         {
             try
             {
-
-                videos.Add(video);
+                _context.Video.Add(Video);
             }
             catch
             {
@@ -64,5 +69,16 @@ namespace SolucionarApi.Repositories
 
         }
 
+        public int LastIndex()
+        {
+            if (this.videos != null)
+            {
+                return videos.Count;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

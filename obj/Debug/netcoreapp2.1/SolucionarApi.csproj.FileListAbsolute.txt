@@ -12,6 +12,22 @@
 /Users/cmdrlias/Documents/Solucionar Manutenções/SolucionarApi/obj/Debug/netcoreapp2.1/SolucionarApi.RazorTargetAssemblyInfo.cache
 /Users/cmdrlias/Documents/Solucionar Manutenções/SolucionarApi/obj/Debug/netcoreapp2.1/SolucionarApi.dll
 /Users/cmdrlias/Documents/Solucionar Manutenções/SolucionarApi/obj/Debug/netcoreapp2.1/SolucionarApi.pdb
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/appsettings.Development.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/appsettings.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/Properties/launchSettings.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/SolucionarApi.deps.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/SolucionarApi.runtimeconfig.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/SolucionarApi.runtimeconfig.dev.json
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/SolucionarApi.dll
+/Users/larissa/Desktop/TimeResponse/bin/Debug/netcoreapp2.1/SolucionarApi.pdb
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.csprojAssemblyReference.cache
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.RazorAssemblyInfo.cache
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.RazorAssemblyInfo.cs
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.AssemblyInfoInputs.cache
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.AssemblyInfo.cs
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.RazorTargetAssemblyInfo.cache
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.dll
+/Users/larissa/Desktop/TimeResponse/obj/Debug/netcoreapp2.1/SolucionarApi.pdb
 C:\Users\rai rais\Desktop\SolucionarApi-master\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\rai rais\Desktop\SolucionarApi-master\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\rai rais\Desktop\SolucionarApi-master\bin\Debug\netcoreapp2.1\Properties\launchSettings.json

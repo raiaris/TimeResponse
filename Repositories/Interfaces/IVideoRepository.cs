@@ -6,10 +6,9 @@ namespace SolucionarApi.Repositories.Interfaces
 {
     public interface IVideoRepository : IBaseRepository
     {
-        IEnumerable<Video> GetAll();
-       
-
+        Resposta GetAll();
         void AddVideo(Video video);
-        void RemoveVideos(bool deletar);
+        void RemoveVideo(int id);
+        int LastIndex();
     }
 }
